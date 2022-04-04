@@ -8,12 +8,12 @@ class ProductDAO extends Model
 {
     public function findAll()
     {
-        // $products = [
-        //     "name" => "Biscuit",
-        //     "categorie" => "alimentaie",
-        //     "prix" => "200fcfa",
-        //     "date Expiraion" => "02/04/2024"
-        // ];
-        return array("Biscuit", "alimentaie");
+        $products = [
+            "name" => "Biscuit",
+            "categorie" => "alimentaie",
+            "prix" => "200fcfa",
+            "date Expiraion" => "02/04/2024"
+        ];
+        return $products;
     }
 }

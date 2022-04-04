@@ -5,9 +5,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="products")
+ * @ORM\Table(name="proprietaires")
  */
-class Product
+class Proprietaire
 {
     /**
      * @ORM\Id
@@ -18,48 +18,29 @@ class Product
     /**
      * @ORM\Column(type="string",length=100)
      */
-    private $name;
-
-    // .. (other code)
-
+    private $prenom;
     /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
-        return $this->id;
-    }
-
+     * @ORM\Column(type="string",length=200)
+     */
+    private $nom;
     /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
+     * @ORM\Column(type="date")
+     */
+    private $dateNaissance;
     /**
-     * Get the value of name
-     */ 
-    public function getName()
-    {
-        return $this->name;
-    }
-
+     * @ORM\Column(type="string",length=120)
+     */
+    private $lieuNaissance;
     /**
-     * Set the value of name
-     *
-     * @return  self
-     */ 
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
+     * @ORM\Column(type="string",length=20)
+     */
+    private $civilite;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $codePieceIdentite;
+    /**
+     * @ORM\Column(type="string",length=100)
+     */
+    private $numeroPieceIdentite;
 }
-    

@@ -15,12 +15,12 @@ class ProductController extends Controller
     {
         $productDAO = new ProductDAO();
         $test = $productDAO->findAll();
-        $products = [
-            "name" => "Biscuit",
-            "categorie" => "alimentaie",
-            "prix" => "200fcfa",
-            "date Expiraion" => "02/04/2024"
-        ];
+        // $products = [
+        //     "name" => "Biscuit",
+        //     "categorie" => "alimentaie",
+        //     "prix" => "200fcfa",
+        //     "date Expiraion" => "02/04/2024"
+        // ];
 
         return $this->view->load("product/liste", $test);
     }
