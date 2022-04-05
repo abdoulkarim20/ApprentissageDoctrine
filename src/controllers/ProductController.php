@@ -1,5 +1,5 @@
 <?php
-namespace src\controllers;
+// namespace src\controllers;
 use libs\system\Controller;
 use src\models\ProductDAO;
 
@@ -14,5 +14,8 @@ class ProductController extends Controller
         $productDAO = new ProductDAO();
         $test = $productDAO->findAll();
         return $this->view->load("product/liste", $test);
+    }
+    public function delete($id){
+        echo $id;
     }
 }
