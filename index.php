@@ -1,8 +1,6 @@
 <?php
-require_once "config/Autoloader.php"; //sans les namespace
-use src\controllers\ProductController; //avec les namespace
-// use Doctrine\Common\Cache\ArrayCache;
-
+require_once "config/Autoloader.php";
+use src\controllers\ProductController;
 $productController = new ProductController();
 $productController->add();
 $productController->getAll();

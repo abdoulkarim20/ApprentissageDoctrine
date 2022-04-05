@@ -1,9 +1,7 @@
 <?php
-
 namespace src\controllers;
-
-use src\models\ProductDAO;
 use libs\system\Controller;
+use src\models\ProductDAO;
 
 class ProductController extends Controller
 {

@@ -12,7 +12,7 @@ class ProductDAO extends Model
             "name" => "Biscuit",
             "categorie" => "alimentaie",
             "prix" => "200fcfa",
-            "date Expiraion" => "02/04/2024"
+            "date Expiraion" => "02/04/2000"
         ];
         return $products;
     }
