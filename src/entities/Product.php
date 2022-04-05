@@ -1,10 +1,8 @@
 <?php
-// src/Product.php
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity
- * @ORM\Table(name="proprietaires")
+ * @ORM\Table(name="products")
  */
 class Product
 {

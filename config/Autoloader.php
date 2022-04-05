@@ -7,6 +7,7 @@ class Autoloader
     }
     static function autoload($class)
     {
+       // echo $class;
         //chargement sans namespace
         if (file_exists("src/models/" . $class . ".php")) {
             require_once "src/models/" . $class . ".php";
