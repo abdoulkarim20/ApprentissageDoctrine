@@ -18,8 +18,8 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/src/ent
 $conn = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
-    'password' => 'Fooly@1251',
-    'dbname'   => 'testDoctrine',
+    'password' => '',
+    'dbname'   => 'testDoctrine1',
 );
 
 // obtaining the entity manager
