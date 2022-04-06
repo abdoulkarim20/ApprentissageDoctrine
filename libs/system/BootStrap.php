@@ -27,7 +27,7 @@ class BootStrap
 
                 }
                 //Si on saisie une mehode on verifie
-                else if(!empty($url[0])){ // si methode et controller existe
+                else if(!empty($url[1])){ // si methode et controller existe
                     $methodeSaisie=$url[1];
                     //On va verifier si la methode exite exite avec la varible de php methode_exite
                     //Methode existe ressoi deux paramettre la methode et le controllerObjet

@@ -19,7 +19,7 @@ $conn = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
     'password' => '',
-    'dbname'   => 'testDoctrine1',
+    'dbname'   => 'reel_brief_tsimoo',
 );
 
 // obtaining the entity manager
