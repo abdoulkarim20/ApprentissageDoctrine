@@ -22,7 +22,7 @@ class BootStrap
                     if(method_exists($controllerObject ,$methodeSaisie)){
                         $controllerObject->$methodeSaisie($url[2]);
                     }else{
-                        die("La ".$methodeSaisie." Saisie n'existe pas dans le controller ".$file);
+                        die("La ".$methodeSaisie. " Saisie n'existe pas dans le controller ".$file);
                     }
 
                 }
@@ -34,7 +34,7 @@ class BootStrap
                     if(method_exists($controllerObject ,$methodeSaisie)){
                         $controllerObject->$methodeSaisie();
                     }else{
-                        die("La ".$methodeSaisie." Saisie n'existe pas dans le controller ".$file);
+                        die("La ".$methodeSaisie. " Saisie n'existe pas dans le controller ".$file);
                     }
                 }
 
