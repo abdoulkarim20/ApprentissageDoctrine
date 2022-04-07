@@ -22,6 +22,10 @@ class ProprietaireDAO extends Model{
     public function getById($id){
         return $proprietaire = $this->entityManager->find('Proprietaire',$id);
     }
+    //modification
+    public function editTest(){
+        $this->entityManager->flush();
+    }
 }
 
 

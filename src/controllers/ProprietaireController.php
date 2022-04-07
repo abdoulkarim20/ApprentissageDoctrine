@@ -54,7 +54,16 @@ class ProprietaireController extends Controller{
     public function update(){
         if(!empty($_POST)){
             extract($_POST);
-            var_dump($_POST);
+            $proprietaire=$this->proprietaireDAO->getById($id);
+            $proprietaire->setNom($_POST['nom']);
+            $proprietaire->setPrenom($_POST['prenom']);
+            $proprietaire->setDateNaissance($_POST['dateNaissance']);
+            $proprietaire->setLieuNaissance($_POST['lieuNaissance']);
+            $proprietaire->setCivilite($_POST['civilite']);
+            $proprietaire->setCodePieceIdentite($_POST['codePieceIdentite']);
+            $proprietaire->setNumeroPieceIdentite($_POST['numeroPieceIdentite']);
+            $this->proprietaireDAO->editTest();
+            return $this->getAll();
         }
     }
 }
