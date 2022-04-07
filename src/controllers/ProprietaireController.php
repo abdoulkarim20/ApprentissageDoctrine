@@ -5,6 +5,7 @@ class ProprietaireController extends Controller{
     //Constructeur
     private $proprietaireDAO;
     public function __construct(){
+        //Parent::__construct c'est grace a lui que la class enfant la va heritier de tous ce qui es defini dans la class parent
         parent::__construct();
         $this->proprietaireDAO = new ProprietaireDAO();
     }
@@ -30,22 +31,30 @@ class ProprietaireController extends Controller{
             $proprietaire->setNumeroPieceIdentite($_POST['numeroPieceIdentite']);
             $this->proprietaireDAO->create($proprietaire);
             return $this->getAll();
-            // if($proprietaireDAO){
-                echo "Donnees ajouter avec succees";
-            // }else{
-                die("Vos donnees ne sont pas enregistrer");
-            // }
         }
         return $this->view->load("proprietaire/add");
     }
     //Delete data 
-    public function remove(){
-        if(!empty($_GET)){
-            extract($_GET);
-            $proprietaires=$this->proprietaireDAO->deleteById($id);
-            return $this->getAll();
-        }else{
-            die("Proprietaire n'existe pas");    
+    public function remove($id){
+        $proprietaires=$this->proprietaireDAO->deleteById($id);
+        return $this->getAll();
+        // if(!empty($_GET)){
+        //     extract($_GET);
+        // $proprietaires=$this->proprietaireDAO->deleteById($id);
+        // return $this->getAll();
+        // }else{
+        //     die("Proprietaire n'existe pas");    
+        // }
+    }
+    //Element a modifier je le renvoi dans le formulaire
+    public function edit($id){
+        $proprietaire = $this->proprietaireDAO->getById($id);
+        return $this->view->load('proprietaire/edit',$proprietaire);
+    }
+    public function update(){
+        if(!empty($_POST)){
+            extract($_POST);
+            var_dump($_POST);
         }
     }
 }
