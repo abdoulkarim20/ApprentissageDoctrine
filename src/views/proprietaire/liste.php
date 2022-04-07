@@ -56,8 +56,8 @@
       <td><?=$proprietaire->getCivilite();?></td>
       <td><?=$proprietaire->getCodePieceIdentite();?></td>
       <td><?=$proprietaire->getNumeroPieceIdentite();?></td>
-      <td class="text-center"><a href="?Proprietaire/<?=$proprietaire->getId();?>"><i class="bi bi-pencil-square"></i></a></td>
-      <td class="text-center"><a href=""><i class="bi bi-trash3-fill" style="color:#ce0033"></i></a></td>
+      <td class="text-center"><a href=""><i class="bi bi-pencil-square"></i></a></td>
+      <td class="text-center"><a href="http://localhost/Brief-Project-TsImmo/ApprentissageDoctrine/Proprietaire/remove/?id=<?=$proprietaire->getId();?>"><i class="bi bi-trash3-fill" style="color:#ce0033"></i></a></td>
     </tr>
     <?php } ?>
   </tbody>
